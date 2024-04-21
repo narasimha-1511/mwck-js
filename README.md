@@ -21,15 +21,15 @@ wallet.subscribe('addressReady', ({ address, state }) => {
 
 wallet.subscribe('txEvent', ({event, address, tx}) => {
   switch (event) {
-    'added': {
+    case 'added': {
       // discovered a new transaction related to this address
     } break;
 
-    'confirmed': {
+    case 'confirmed': {
       // a transaction related to this address was included in a block
     } break;
 
-    'removed': {
+    case 'removed': {
       // a transaction related to this address was dropped from the mempool
     } break;
   }
